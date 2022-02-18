@@ -14,15 +14,15 @@ import java.io.IOException;
 
 public class ExcelUtil {
 
-    public static final String       testDataExcelFileName = "testdata.xlsx"; //Global test data excel file
-    public static final String       currentDir            = System.getProperty("user.dir");  //Main Directory of the project
-    public static       String       testDataExcelPath     = null; //Location of Test data excel file
+    public static final String testDataExcelFileName = "testdata.xlsx"; //Global test data excel file
+    public static final String currentDir = System.getProperty("user.dir");  //Main Directory of the project
+    public static String testDataExcelPath = null; //Location of Test data excel file
     private static XSSFWorkbook excelWBook; //Excel WorkBook
     private static XSSFSheet excelWSheet; //Excel Sheet
     private static XSSFCell cell; //Excel cell
     private static XSSFRow row; //Excel row
-    public static       int          rowNumber; //Row Number
-    public static       int          columnNumber; //Column Number
+    public static int rowNumber; //Row Number
+    public static int columnNumber; //Column Number
 
     // This method has two parameters: "Test data Excel file name" and "Excel sheet name"
     // It creates FileInputStream and set Excel file and Excel sheet to excelWBook and excelWSheet variables.
@@ -70,6 +70,4 @@ public class ExcelUtil {
         fileOut.flush();
         fileOut.close();
     }
-
-
 }
