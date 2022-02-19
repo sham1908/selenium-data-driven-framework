@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="utils.listeners.TestListener" />
     </listeners>
-    <test verbose="2" preserve-order="true" name="/Users/evangelo.sgkavogiannis/IdeaProjects/DataDrivenFramework">
+    <test name="BankManagerLoginTest">
        <classes>
            <class name="test.BankManagerLoginTest"></class>
        </classes>
