@@ -32,41 +32,18 @@ public class BaseTest {
         Log.info("Tests are starting");
 
         System.setProperty("webdriver.chrome.driver", "/Users/evangelos/Downloads/chromedriver");
-        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         Thread.sleep(2000);
         driver.manage().window().maximize();
         Thread.sleep(2000);
-
-        //load the properties file
-//        if (driver == null) {
-//            try {
-//                fis = new FileInputStream(c + "/src/test/resources/properties/Config.properties");
-//            } catch (FileNotFoundException e) {
-//                e.printStackTrace();
-//            }
-//            try {
-//                config.load(fis);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//
-//            if(config.getProperty("browser").equals(("chrome"))){
-//                driver = new ChromeDriver();
-//            }
-//
-//            Thread.sleep(2000);
-//            driver.manage().window().maximize();
-//            Thread.sleep(2000);
-//        }
     }
 
-//    @AfterClass
-//    public void tearDown() {
-//        Log.info("Tests are ending");
-//        driver.close();
-//
-//    }
+    @AfterClass
+    public void tearDown() {
+        Log.info("Tests are ending");
+        driver.close();
+
+    }
 
 
 }

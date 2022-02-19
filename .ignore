@@ -30,4 +30,4 @@ hs_err_pid*
 target
 allure-results
 extent-reports
-log4j
+log4j2/
