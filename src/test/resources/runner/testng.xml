@@ -6,7 +6,7 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="/Users/evangelo.sgkavogiannis/IdeaProjects/DataDrivenFramework">
        <classes>
-           <class name="testcases.BankManagerLoginTest"></class>
+           <class name="test.BankManagerLoginTest"></class>
        </classes>
     </test>
 </suite>
