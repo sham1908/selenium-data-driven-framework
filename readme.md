@@ -9,5 +9,8 @@ Technologies/Libraries:
 
 How to Run the tests
 - Clone the repo
+- Install maven
+- Install chromedriver
+- Make sure the System.setProperty in the BaseTest is valid for system/OS
 - maven > reload project
 - run the test via testng.xml
