@@ -1,5 +1,11 @@
 # Selenium Data-Driven Framework
 
+Data-Driven Framework that reads the test input from an excel file
+it enables data-driven testing
+
+Pattern used: Page Object Model (without Page Factory)
+
+
 Technologies/Libraries:
 - Apache POI
 - log4j2
