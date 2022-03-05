@@ -33,12 +33,12 @@ public class BankManagerLoginPage extends BasePage {
      * Page Methods
      */
     //Create a customer
-    public void addNewCustomer() {
+    public void addNewCustomer(String firstName, String lastName, String postCode) {
         Log.info("Creating new customer");
         click(addCustomerButton);
-        writeText(firstNameTextBox, "Evangelos");
-        writeText(lastNameTextBox, "Evangelos");
-        writeText(postCodeTextBox, "N4413");
+        writeText(firstNameTextBox, firstName);
+        writeText(lastNameTextBox, lastName);
+        writeText(postCodeTextBox, postCode);
         click(addCustomerConfirmButton);
     }
 }

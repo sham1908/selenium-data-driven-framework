@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.HomePage;
 import utils.excel.ExcelUtil;
+import utils.logs.Log;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -16,13 +17,14 @@ import static utils.ExtentReports.ExtentTestManager.startTest;
 
 public class BankManagerLoginTest extends BaseTest {
 
-//    @BeforeTest
-//    public void setupTestData() throws IOException {
-//        //Set Test Data Excel and Sheet
-//        System.out.println("************Setup Test Level Data**********");
-//        ExcelUtil.setExcelFileSheet("LoginData");
-//        System.out.println(ExcelUtil.getCellData(2, 0));
-//    }
+    @BeforeTest
+    public void setupTestData() throws IOException {
+        //Set Test Data Excel and Sheet
+        // Doing this in the test class because each test class may have different test data.
+        Log.info("*****Setup Test Level Data*****");
+        ExcelUtil.setExcelFileSheet("LoginData");
+        System.out.println(ExcelUtil.getCellData(2, 0));
+    }
 
 
     @Test
@@ -33,7 +35,11 @@ public class BankManagerLoginTest extends BaseTest {
 
         homePage.goToWay2Automation()
                 .goToBankManagerLoginPage()
-                .addNewCustomer();
+                .addNewCustomer(
+                        ExcelUtil.getCellData(2, 0),
+                        ExcelUtil.getCellData(2, 1),
+                        ExcelUtil.getCellData(2, 2)
+                );
         Alert simpleAlert = driver.switchTo().alert();
         simpleAlert.accept();
     }

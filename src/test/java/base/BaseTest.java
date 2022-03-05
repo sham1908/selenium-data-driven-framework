@@ -21,7 +21,7 @@ import java.util.Properties;
 public class BaseTest {
 
     protected WebDriver driver; //not private because it's used outside TestBase class
-    protected Properties config = new Properties(); //not prvate
+    protected Properties config = new Properties(); //not private
     protected Properties OR = new Properties(); //not private because it's used outside TestBase class
     private FileInputStream fis;
     public WebDriverWait wait;
@@ -31,7 +31,8 @@ public class BaseTest {
 
         Log.info("Tests are starting");
 
-        System.setProperty("webdriver.chrome.driver", "/Users/evangelos/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
+        System.out.println(System.getProperty("user.dir"));
         driver = new ChromeDriver();
         Thread.sleep(2000);
         driver.manage().window().maximize();
