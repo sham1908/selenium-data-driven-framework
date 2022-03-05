@@ -1,7 +1,6 @@
 # Selenium Data-Driven Framework
 
-Data-Driven Framework that reads the test input from an excel file
-it enables data-driven testing
+Data-Driven Framework that reads the test input from an excel file and it enables data-driven testing
 
 Pattern used: Page Object Model (without Page Factory)
 
